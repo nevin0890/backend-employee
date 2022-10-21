@@ -11,7 +11,7 @@ public interface EmployeeDoa extends CrudRepository<EmployeeModel, Integer> {
     @Query(value = "DELETE FROM `employees` WHERE `id` =:id", nativeQuery = true)
     void deleteById(int id);
 
-    @Query(value = "SELECT `id`, `address`, `company`, `dob`, `email`, `name`, `salary` FROM `employees` WHERE `name` =:name", nativeQuery = true)
+    @Query(value = "SELECT `id`, `address`, `company`, `dob`, `email`, `name`, `salary` FROM `employees` WHERE `name` =:Name", nativeQuery = true)
     EmployeeModel SearchbyName(String name);
 
 }
